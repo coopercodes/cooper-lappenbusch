@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./fonts/DMSans-Variable.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 1000; /* Variable font weight range */
+  font-display: swap;
+}
+
+/* DM Sans Italic (Variable) */
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./fonts/DMSans-Italic-Variable.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 100 1000; /* Variable font weight range */
+  font-display: swap;
+}
+
+html {
+    font-family: 'DM Sans', sans-serif;
+}
