@@ -8,10 +8,10 @@
 <div class="sticky top-[24px] z-50 left-1/2 transform -translate-x-1/2  flex items-center  py-2.5 w-[700px] bg-[#273F4F] rounded-[8px]">
     <div class="flex justify-between  mx-4 w-full">
         <div class="flex items-center">
-            <p class="text-white font-bold text-lg">Cooper Lappenbusch</p>
+            <a href="/" class="text-white font-bold text-lg">Cooper Lappenbusch</a>
             <div class="flex items-center space-x-6 ml-6 text-white">
-                <p>Blog</p>
-                <p>Projects</p>
+                <a href="/blog" class="" >Blog</a>
+                <a href="/blog" class="" >Music</a>
             </div>
         </div>
 
