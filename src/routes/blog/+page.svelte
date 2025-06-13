@@ -28,7 +28,7 @@
         <div class="space-y-8 mt-12">
             
             <!-- Blog Post 1 -->
-            <article class="flex items-center cursor-pointer   border border-black p-6 hover:shadow-md transition-shadow duration-200">
+            <a href="/blog/template" class="flex items-center cursor-pointer  group border border-black p-6 hover:shadow-md transition-shadow duration-200">
                 <div class="flex-1 pr-6">
                     <div class="flex justify-between mb-3">
                         <div class="flex items-center gap-2 ">
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     
-                    <h2 class="text-2xl font-bold text-black mb-3 hover:text-blue-600 cursor-pointer transition-colors">
+                    <h2 class="text-2xl font-bold text-black mb-3 group-hover:text-blue-600 cursor-pointer transition-colors">
                         The Importance Of Operating System First Applications
                     </h2>
                     <p class="text-black leading-relaxed">
@@ -47,7 +47,7 @@
                     </p>
 
                 </div>
-            </article>
+            </a>
 
             <div class="h-[1px] w-24 bg-neutral-400 mx-auto"></div>
 
