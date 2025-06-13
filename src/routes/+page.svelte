@@ -90,7 +90,7 @@
     <div class="w-full md:w-[1300px]  "> <!-- h-[500px] -->
         <div class="flex h-full md:mt-0 ">
             
-            <div class="flex flex-col  w-[630px]">
+            <div class="flex flex-col w-full  md:w-[630px]">
                 <div class="flex items-center space-x-6">
                     <p class="text-4xl font-bold">Arcana</p>
                     <div class="w-full bg-black h-[1px]"></div>
@@ -103,9 +103,16 @@
                     <div class="aspect-[7/4.5] w-full rounded-[12px] relative overflow-hidden shadow-xl transition-opacity  duration-500 ease-in-out" 
                         style="background-image: url('{images[currentIndex].url}'); background-size: cover; background-position: center;">
                         
-                        <div class="absolute z-10 bottom-0 w-full h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[12px]"></div>                        
+                        <div class="absolute z-10 bottom-0 w-full h-20 md:h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[12px]"></div>                        
                         
-                        <div class="absolute bottom-6 left-6 z-20 backdrop-blur-md bg-[#273F4F]/10 border border-white/30 rounded-lg px-4 py-3 shadow-lg">
+
+                         <div class="absolute md:hidden  bottom-4 left-4 z-20 backdrop-blur-md  rounded-lg px-2 py-1 shadow-lg">
+                            <p class="md:text-xl font-semibold text-sm drop-shadow-lg transition-all duration-300 text-white">
+                                {images[currentIndex].title}
+                            </p>
+                        </div>
+
+                        <div class="hidden md:absolute  bottom-6 left-6 z-20 backdrop-blur-md bg-[#273F4F]/10 border border-white/30 rounded-lg px-4 py-3 shadow-lg">
                             <p class="md:text-xl font-semibold mb-0.5 drop-shadow-lg transition-all duration-300 text-white">
                                 {images[currentIndex].title}
                             </p>
@@ -269,7 +276,7 @@ click your tag (ex: Studying),  and start tracking your time.
         
     </div> -->
 
-     <div class="w-full max-w-7xl mx-auto h-[700px] flex gap-12 p-4">
+     <div class="w-full max-w-7xl mx-auto h-[700px] flex gap-12 p-0">
         <!-- Left Column - Philosophy with decorative bars -->
         <div class=" relative overflow-hidden md:flex-1 hidden rounded-lg p-8">
             <!-- Orange bars positioned absolutely -->
@@ -292,7 +299,7 @@ click your tag (ex: Studying),  and start tracking your time.
         <!-- Right Column - Contact Form -->
         <div class="flex-1 flex items-center justify-center">
             <div class="w-full max-w-xl">
-                <h1 class="text-5xl font-bold text-black mb-2">Let's Work</h1>
+                <h1 class="text-5xl font-bold text-black pb-2">Let's Work</h1>
                 <p class="text-lg mb-2 text-black">I'm for hire. Need educational products built? Let's do it. Need a solid player for your next startup? I'm there. Reach out and let's talk.</p>
                 <p class="mb-8 text-sm">email - cooper.lappenbusch@gmail.com</p>
 
