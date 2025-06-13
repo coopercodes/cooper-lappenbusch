@@ -92,7 +92,7 @@
             
             <div class="flex flex-col w-full  md:w-[630px]">
                 <div class="flex items-center space-x-6">
-                    <p class="text-4xl font-bold">Arcana</p>
+                    <p class="text-3xl md:text-4xl font-bold">Arcana</p>
                     <div class="w-full bg-black h-[1px]"></div>
                     <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
                         Read The Post
@@ -141,7 +141,7 @@
                         </button>
                     </div>
                 </div>
-                <p class="text-xl mt-4 pr-0">
+                <p class="text-lg md:text-xl mt-4 pr-0">
                     Meet Arcana, my answer to the eternal question: "Where did 
 my day go?". Arcana is a timer that sits in the system tray of 
 your operating system, making it easy to click the Arcana icon,
@@ -156,10 +156,10 @@ click your tag (ex: Studying),  and start tracking your time.
 
                 <div class="flex space-x-4">
                     <div class="flex flex-col">
-                        <p class="text-xl font-bold pr-0">
+                        <p class="text-lg md:text-xl font-bold pr-0">
                         What I Learned
                         </p>
-                        <p class="text-xl mt-2 pr-0">
+                        <p class="text-lg md:text-xl mt-2 pr-0">
                             When building products, sometimes
                             the most simple solutions are the
                             most effective ones. <br/> <br/>
