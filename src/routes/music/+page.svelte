@@ -27,7 +27,7 @@
                     Beautiful products are built through simple and effective pieces.
                 </p>
             </div> -->
-<div class="pt-[124px] flex flex-col w-[800px] mx-auto">
+<div class="pt-[124px] flex flex-col w-full md:w-[800px] mx-auto px-6">
         
         
         <div class="flex items-center">
@@ -35,8 +35,8 @@
                 <h1 class="text-4xl font-bold text-black mb-2">Music</h1>
                 <p class=" mb-2 text-black w-[370px]">This page is where I upload my music.  My main passion within music is for understanding how music influences film.</p>
             </div>
-            <div class="w-[1px] h-[84px] bg-black mx-12"></div>
-            <div class="flex flex-col justify-center w-full bg-[#273F4F] rounded-[10px] p-6.5">
+            <div class="md:flex hidden w-[1px] h-[84px] bg-black mx-12"></div>
+            <div class="md:flex hidden flex-col justify-center w-full bg-[#273F4F] rounded-[10px] p-6.5">
                 <p class="text-white font-extrabold">Art Philosophy</p>
                 <p class="text-white">By creating art we are able to understand the subtle decisions that build great things.</p>
             </div>
