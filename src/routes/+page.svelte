@@ -277,16 +277,13 @@ click your tag (ex: Studying),  and start tracking your time.
     </div> -->
 
      <div class="w-full max-w-7xl mx-auto h-[700px] flex gap-12 p-0">
-        <!-- Left Column - Philosophy with decorative bars -->
-        <div class=" relative overflow-hidden md:flex-1 hidden rounded-lg p-8">
-            <!-- Orange bars positioned absolutely -->
+<div class="relative overflow-hidden hidden lg:flex lg:flex-1 rounded-lg p-8 ">
             <div class="absolute bottom-64 right-12 w-64 h-5 bg-orange-500 rounded-full transform rotate-[60deg] origin-left"></div>
             <div class="absolute bottom-100 -right-24 w-64 h-5 bg-orange-500 rounded-full transform rotate-[80deg] origin-left"></div>
             <div class="absolute bottom-128 right-52 w-64 h-5 bg-orange-500 rounded-full transform rotate-[80deg] origin-left"></div>
 
             <div class="absolute top-64 right-16 w-64 h-5 bg-orange-500 rounded-full transform -rotate-45 origin-left"></div>
             
-            <!-- Philosophy text -->
             <div class="absolute bottom-20 left-12 max-w-xs">
                 <h3 class="text-lg font-black text-black">Philosophy</h3>
                 <p class="text-sm w-52 text-black leading-relaxed">
@@ -298,7 +295,7 @@ click your tag (ex: Studying),  and start tracking your time.
         
         <!-- Right Column - Contact Form -->
         <div class="flex-1 flex items-center justify-center">
-            <div class="w-full max-w-xl">
+            <div class="w-full md:max-w-xl">
                 <h1 class="text-5xl font-bold text-black pb-2">Let's Work</h1>
                 <p class="text-lg mb-2 text-black">I'm for hire. Need educational products built? Let's do it. Need a solid player for your next startup? I'm there. Reach out and let's talk.</p>
                 <p class="mb-8 text-sm">email - cooper.lappenbusch@gmail.com</p>
@@ -329,7 +326,7 @@ click your tag (ex: Studying),  and start tracking your time.
     </div>
     
 
-    <div class="my-32 h-[500x] w-[500px] bg-transparent flex items-center">
+    <div class="my-32 h-[500x] w-full md:w-[500px] bg-transparent flex items-center">
         
     </div>
 </div>
