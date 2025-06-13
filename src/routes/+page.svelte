@@ -70,7 +70,7 @@
         <div class="w-full h-[1px] bg-black my-6 md:w-[1px] md:h-[110px] md:mx-16 md:my-0"></div>
         
         <div class="flex flex-col text-left">
-            <p class="text-2xl md:text-3xl leading-10 ">I'm a software engineer, educator, <br/>
+            <p class="text-2xl md:text-3xl leading-10 ">I'm a software engineer, educator, <span class="md:inline hidden"><br/></span>
                 and product designer.</p>
         </div>
     </div>
