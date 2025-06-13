@@ -38,37 +38,40 @@
     }
 </script>
 
-<div class="  pt-[124px] flex flex-col items-center ">
+<div class="  pt-[124px] flex flex-col items-center mx-6 md:mx-0">
 
-    <div class="w-[700px] h-[400px] rounded-[10px] relative overflow-hidden shadow-2xl" 
-            style="background-image: url('arcanaScreen.png'); background-size: cover; background-position: center;">
+    <div class="w-full mx-12 h-72 md:w-[700px] md:h-[400px] rounded-[10px] relative overflow-hidden shadow-2xl" 
+         style="background-image: url('arcanaScreen.png'); background-size: cover; background-position: center;">
         
-        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[10px]"></div>
+        <div class="absolute bottom-0 left-0 w-full h-24 md:h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[10px]"></div>
         
-        <div class="absolute bottom-5 left-8 text-white">
-            <p class="text-xl font-bold mb-0.5 drop-shadow-lg">Arcana</p>
-            <p class="text-sm opacity-90 drop-shadow-md">Time tracking in 3 clicks</p>
+        <div class="absolute bottom-3 left-4 md:bottom-5 md:left-8 text-white">
+            <p class="text-lg md:text-xl font-bold mb-0.5 drop-shadow-lg">Arcana</p>
+            <p class="text-xs md:text-sm opacity-90 drop-shadow-md">Time tracking in 3 clicks</p>
         </div>
     </div>
 
 
-    <div class="flex space-x-4 mt-8">
+    <div class="flex space-x-2 md:space-x-4 mt-6 md:mt-8">
         <div class="w-16 h-3 bg-[#FE7743] cursor-pointer"></div>
         <div class="w-16 h-3 bg-neutral-500  cursor-pointer"></div>
         <div class="w-16 h-3 bg-neutral-500  cursor-pointer"></div>
         <div class="w-16 h-3 bg-neutral-500  cursor-pointer"></div>
     </div>
-    <div class="flex  items-center  mt-16">
 
     
-        <div class="flex flex-col">
-            <p class="text-3xl">Hi, I'm</p>
-            <p class="text-6xl font-extrabold">Cooper</p>
+    <div class="flex flex-col w-full md:w-max mt-12 md:mt-16 md:flex-row md:items-center">
+        <div class="flex flex-col text-left">
+            <p class="text-3xl mb-1 md:mb-0">Hi, I'm</p>
+            <p class="text-5xl md:text-6xl font-extrabold">Cooper</p>
         </div>
-        <div class="w-[1px] h-[110px] bg-black mx-16"></div>
-        <div class="flex flex-col">
-            <p class="text-3xl leading-10 mt-2">I'm a software engineer, educator, <br/>
-and product designer. </p>
+        
+        <!-- Divider: horizontal on mobile, vertical on desktop -->
+        <div class="w-full h-[1px] bg-black my-6 md:w-[1px] md:h-[110px] md:mx-16 md:my-0"></div>
+        
+        <div class="flex flex-col text-left">
+            <p class="text-2xl md:text-3xl leading-10 ">I'm a software engineer, educator, <br/>
+                and product designer.</p>
         </div>
     </div>
 
