@@ -40,7 +40,7 @@
 
 <div class="  pt-[124px] flex flex-col items-center mx-6 md:mx-0">
 
-    <div class="w-full mx-12 h-72 md:w-[700px] md:h-[400px] rounded-[10px] relative overflow-hidden shadow-2xl" 
+    <div class="w-full mx-12 aspect-[7/4] md:w-[700px] md:h-[400px] rounded-[10px] relative overflow-hidden shadow-2xl" 
          style="background-image: url('arcanaScreen.png'); background-size: cover; background-position: center;">
         
         <div class="absolute bottom-0 left-0 w-full h-24 md:h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[10px]"></div>
@@ -63,7 +63,7 @@
     <div class="flex flex-col w-full md:w-max mt-12 md:mt-16 md:flex-row md:items-center">
         <div class="flex flex-col text-left">
             <p class="text-3xl mb-1 md:mb-0">Hi, I'm</p>
-            <p class="text-5xl md:text-6xl font-extrabold">Cooper</p>
+            <p class="text-6xl md:text-6xl font-extrabold">Cooper</p>
         </div>
         
         <!-- Divider: horizontal on mobile, vertical on desktop -->
@@ -75,10 +75,20 @@
         </div>
     </div>
 
-    <div class="my-40 h-[1px] w-[500px] bg-neutral-300 flex items-center"></div>
+    <div class="my-28 mx-4 md:my-40 w-full  md:w-[500px]  rounded-[10px] items-center  flex">
+        <div class="flex items-center justify-between  w-full">
+                        <!-- <div class="w-[36px] h-[20px] aspect-square bg-[#FE7743]"></div> -->
+            <div class="grow w-full h-[1px] bg-neutral-400 md:mr-0 mr-6 "></div>
 
-    <div class="w-[1300px] h-[500px] ">
-        <div class="flex h-full ">
+            <p class="text-[black] font-semibold leading-6.5 text-2xl shrink-0 md:hidden flex">My Projects</p>
+            <div class="grow w-full h-[1px] bg-neutral-400 ml-6 md:ml-0 "></div>
+            <!-- <div class="w-[36px] h-[20px] bg-[#FE7743] aspect-square"></div> -->
+            
+        </div>
+    </div>
+
+    <div class="w-full md:w-[1300px]  "> <!-- h-[500px] -->
+        <div class="flex h-full md:mt-0 ">
             
             <div class="flex flex-col  w-[630px]">
                 <div class="flex items-center space-x-6">
@@ -87,6 +97,42 @@
                     <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
                         Read The Post
                     </button>
+                </div>
+                <div class="flex md:hidden items-center relative my-4 mt-6" >
+                    
+                    <div class="aspect-[7/4.5] w-full rounded-[12px] relative overflow-hidden shadow-xl transition-opacity  duration-500 ease-in-out" 
+                        style="background-image: url('{images[currentIndex].url}'); background-size: cover; background-position: center;">
+                        
+                        <div class="absolute z-10 bottom-0 w-full h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[12px]"></div>                        
+                        
+                        <div class="absolute bottom-6 left-6 z-20 backdrop-blur-md bg-[#273F4F]/10 border border-white/30 rounded-lg px-4 py-3 shadow-lg">
+                            <p class="md:text-xl font-semibold mb-0.5 drop-shadow-lg transition-all duration-300 text-white">
+                                {images[currentIndex].title}
+                            </p>
+                            <p class="text-[12px] md:text-sm opacity-100 drop-shadow-md transition-all duration-300 max-w-md text-white">
+                                {images[currentIndex].description}
+                            </p>
+                        </div>
+
+                        <button 
+                            class="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
+                            onclick={previousImage}
+                            aria-label="Previous image"
+                        >
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+
+                        <button 
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
+                        onclick={nextImage}
+                        aria-label="Next image">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        </button>
+                    </div>
                 </div>
                 <p class="text-xl mt-4 pr-0">
                     Meet Arcana, my answer to the eternal question: "Where did 
@@ -133,7 +179,7 @@ click your tag (ex: Studying),  and start tracking your time.
                             <p class="text-white text-left leading-6.5 ">TypeScript</p>
                             <p class="text-white leading-6.5 ">Rust</p>
                             <p class="text-white leading-6.5 ">Svelte 5</p>
-                                                    <p class="text-white leading-6.5">Tauri 2.0</p>
+                            <p class="text-white leading-6.5">Tauri 2.0</p>
 
                         </div>
                         
@@ -141,19 +187,16 @@ click your tag (ex: Studying),  and start tracking your time.
                 </div>
                 
             </div>
-            <!-- DIVIDER HERE -->
-             <div class="w-[1px] h-full bg-transparent mx-12"></div>
+            <!-- DIVIDER HERE, ONLY SHOW ON DESKTOP -->
+            <div class="w-[1px] h-full bg-transparent mx-12 md:flex hidden"></div>
              
-            <div class="flex flex-col justify-center w-[750px]  ">
+            <div class=" flex-col justify-center w-[750px] hidden md:flex  ">
                 <div class="flex items-center relative" >
                     
-                    <!-- Main image container -->
                     <div class="w-full h-[400px] rounded-[12px] relative overflow-hidden shadow-xl transition-opacity  duration-500 ease-in-out" 
                         style="background-image: url('{images[currentIndex].url}'); background-size: cover; background-position: center;">
                         
-                        <!-- Gradient overlay -->
                         <div class="absolute z-10 bottom-0 left-0 w-full h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[12px]"></div>                        
-                                                <!-- Image content -->
                                 <div class="absolute bottom-6 left-6 z-20 backdrop-blur-md bg-[#273F4F]/10 border border-white/30 rounded-lg px-4 py-3 shadow-lg">
                             <p class="text-xl font-bold mb-0.5 drop-shadow-lg transition-all duration-300 text-white">
                                 {images[currentIndex].title}
@@ -163,18 +206,18 @@ click your tag (ex: Studying),  and start tracking your time.
                             </p>
                         </div>
 
-                        <!-- Navigation arrows -->
                         <button 
-                        class="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-0 hover:opacity-100 group-hover:opacity-100"
-                        onclick={previousImage}
-                        aria-label="Previous image">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
+                            class="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
+                            onclick={previousImage}
+                            aria-label="Previous image"
+                        >
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
                         </button>
 
                         <button 
-                        class="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-0 hover:opacity-100 group-hover:opacity-100"
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
                         onclick={nextImage}
                         aria-label="Next image">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -183,24 +226,8 @@ click your tag (ex: Studying),  and start tracking your time.
                         </button>
                     </div>
                 </div>
-                <!-- <div class="flex flex-col items-center justify-center -mt-4">
-                    <div class="p-2 shadow-2xl px-8 flex items-center justify-center border border-[#FE7743] bg-[#313131] z-20 w-max rounded-[12px]">
-                        <div class="flex space-x-8">
-                        {#each images as image, index}
-                            <button
-                            class="h-5 w-5 rounded-full cursor-pointer transition-all duration-300 hover:scale-110 {index === currentIndex ? 'bg-[#FE7743]' : 'bg-[#A4A4A4] hover:bg-[#FE7743]/60'}"
-                            onclick={() => goToImage(index)}
-                            aria-label="Go to image {index + 1}">
-                            </button>
-                        {/each}
-                        </div>
-                    </div>
 
-                     <div class="mt-2 text-sm text-gray-600">
-                        {currentIndex + 1} / {images.length}
-                    </div>
-                </div> -->
-                <div class="mt-4 flex justify-center space-x-4">
+                <div class="mt-4  justify-center space-x-4 hidden md:flex">
                     {#each images as image, index}
                         <button
                         class="w-24 h-16 cursor-pointer antialiased rounded-lg overflow-hidden border-2 transition-all duration-200 {index === currentIndex ? 'border-[#FE7743] scale-105' : 'border-gray-300 hover:border-[#FE7743]/60'}"
@@ -225,9 +252,7 @@ click your tag (ex: Studying),  and start tracking your time.
                     </div>
                     
                 </div> -->
-                
             </div>
-            <!-- <div class="w-[1px] h-full bg-black mx-12"></div> -->
              
         </div>
     </div>
@@ -236,7 +261,7 @@ click your tag (ex: Studying),  and start tracking your time.
     <!-- <div class="my-32 h-[500x] w-[500px] bg-transparent flex items-center">
         
     </div> -->
-    <div class="my-40 h-[1px] w-[500px] bg-neutral-300 flex items-center">
+    <div class="my-24 mx-4 md:my-40 w-full h-[1px]  md:w-[500px] bg-neutral-400 flex items-center">
         
     </div>
 
@@ -244,9 +269,9 @@ click your tag (ex: Studying),  and start tracking your time.
         
     </div> -->
 
-     <div class="w-full max-w-7xl mx-auto h-[700px] flex gap-12 p-8">
+     <div class="w-full max-w-7xl mx-auto h-[700px] flex gap-12 p-4">
         <!-- Left Column - Philosophy with decorative bars -->
-        <div class="flex-1 relative overflow-hidden  rounded-lg p-8">
+        <div class=" relative overflow-hidden md:flex-1 hidden rounded-lg p-8">
             <!-- Orange bars positioned absolutely -->
             <div class="absolute bottom-64 right-12 w-64 h-5 bg-orange-500 rounded-full transform rotate-[60deg] origin-left"></div>
             <div class="absolute bottom-100 -right-24 w-64 h-5 bg-orange-500 rounded-full transform rotate-[80deg] origin-left"></div>
@@ -266,7 +291,7 @@ click your tag (ex: Studying),  and start tracking your time.
         
         <!-- Right Column - Contact Form -->
         <div class="flex-1 flex items-center justify-center">
-            <div class="w-full max-w-md">
+            <div class="w-full max-w-xl">
                 <h1 class="text-5xl font-bold text-black mb-2">Let's Work</h1>
                 <p class="text-lg mb-2 text-black">I'm for hire. Need educational products built? Let's do it. Need a solid player for your next startup? I'm there. Reach out and let's talk.</p>
                 <p class="mb-8 text-sm">email - cooper.lappenbusch@gmail.com</p>
