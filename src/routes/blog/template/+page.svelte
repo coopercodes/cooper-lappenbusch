@@ -75,7 +75,7 @@
 <div class="pt-[74px] flex flex-col w-full md:w-[750px] mx-auto px-6">
         
         
-        <div class="flex items-center w-full  mt-24">
+        <div class="flex items-center w-full  mt-12">
             <div class="flex flex-col w-full ">
                 <!-- <div class="hidden placeholder-container">
                     <div class="gradient-placeholder">
@@ -83,7 +83,7 @@
                 </div> -->
                 <h1 class="text-5xl font-bold text-black mb-4 leading-14 mr-6">On Portfolio Design</h1>
                 <p class=" text-black w-[400px] mr-0">
-                    My journey through building a design ethos for cooperlappenbusch.com. My attempt at building a portfolio that felt "cooper".
+                    My journey through building a design ethos for cooperlappenbusch.com. My attempt at building a portfolio that felt "genuine".
                 </p>
                 <!-- <p class="text-lg text-black w-[400px]">
                     Thoughts on the creative process of portfolio design, and the thought process behind building cooperlappenbusch.com.
@@ -130,8 +130,8 @@
 
         
         </div>
-        <div class="flex  my-8">
-            <div class="h-[1px] w-full bg-black"></div>
+        <div class="flex justify-center my-10">
+            <div class="h-[1px] w-[50%] bg-black"></div>
         </div>
 
         <p class="text-lg text-black">
@@ -154,8 +154,12 @@
         </div>
 
         <p class="text-lg text-black mt-8">
-            So I started thinking.
-       </p>
+            So I started thinking. How can I build a better portfolio? One that doesn't feel like my software projects, and better represents who I am cohesively?
+        </p>
+
+        <p class="text-lg text-black mt-4">
+            So I decided to answering some questions. If you're on the pursuit of a better portfolio, it might worthwhile to consider these questions as well.
+        </p>
 
     <div class="my-32 h-[800px] w-full md:w-[500px] bg-transparent flex items-center">
     </div>
