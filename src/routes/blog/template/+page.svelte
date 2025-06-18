@@ -77,23 +77,14 @@
         
         <div class="flex items-center w-full  mt-12">
             <div class="flex flex-col w-full ">
-                <!-- <div class="hidden placeholder-container">
-                    <div class="gradient-placeholder">
-                    </div>
-                </div> -->
                 <h1 class="text-5xl font-bold text-black mb-4 leading-14 mr-6">On Portfolio Design</h1>
-                <p class=" text-black w-[400px] mr-0">
+                <p class=" text-black w-full pr-12 md:pr-0 md:w-[400px]">
                     My journey through building a design ethos for cooperlappenbusch.com. My attempt at building a portfolio that felt "genuine".
                 </p>
-                <!-- <p class="text-lg text-black w-[400px]">
-                    Thoughts on the creative process of portfolio design, and the thought process behind building cooperlappenbusch.com.
-                </p> -->
-                
             </div>
             <div class="flex flex-col    bg-black text-white p-4">
                 <div class="flex justify-between">
                     <p>written by</p>
-                    
                 </div>
                 <p class="text-wrap font-black whitespace-nowrap">Cooper Lappenbusch</p>
                 <a href="https://x.com/cooperlappenbus" target="_blank" rel="noopener noreferrer" class="flex items-center text-sm text-gray-300 cursor-pointer group mt-1">

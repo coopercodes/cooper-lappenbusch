@@ -16,7 +16,7 @@
         <div class="flex items-center">
             <div class="flex flex-col">
                 <h1 class="text-4xl font-bold text-black mb-2">Blog</h1>
-                <p class=" mb-2 text-black w-[370px]">My blog is a place to store my ideas. Whether it is an idea on music, software engineering, product, or just modern life, you will find it written here.</p>
+                <p class=" mb-2 text-black w-full pr-12 md:pr-0 md:w-[370px]">My blog is a place to store my ideas. Whether it is an idea on music, software engineering, product, or just modern life, you will find it written here.</p>
             </div>
             <div class="md:flex hidden w-[1px] h-[84px] bg-black mx-12"></div>
             <div class="md:flex hidden  flex-col justify-center w-full bg-[#273F4F] rounded-[10px] p-6.5">
@@ -51,7 +51,7 @@
 
             <div class="h-[1px] w-24 bg-neutral-400 mx-auto"></div>
 
-            <article class="flex items-center cursor-pointer   border border-black p-6 hover:shadow-md transition-shadow duration-200">
+            <a href="/blog/template" class="flex items-center cursor-pointer   border border-black p-6 hover:shadow-md transition-shadow duration-200">
                 <div class="flex-1 pr-6">
                     <div class="flex justify-between mb-3">
                         <div class="flex items-center gap-2 ">
@@ -70,7 +70,7 @@
                     </p>
 
                 </div>
-            </article>
+            </a>
         </div>  
 
         <div class="my-32 h-[500x] w-full md:w-[500px] bg-transparent flex items-center">

@@ -12,10 +12,24 @@
         },
         {
             id: "song2",
-            name: "Arcana 2",
-            description: "An ambient track designed to be used in the background of my Arcana project. Creates a focused and goal oriented atmosphere.",
+            name: "Her",
+            description: "A film soundtrack inspired by Her, a simple delayed synth. Nothing special, but exploratory. Love the Her soundtrack :)",
             date: "06/12/2025",
             duration: "3m 21s"
+        },
+        {
+            id: "tenet",
+            name: "Tenet",
+            description: "A film soundtrack similar to sounds from Tenet, with a focus on synth bass and reverbed / delayed guitars and bells. Custom sounds across.",
+            date: "06/12/2025",
+            duration: "1m 58s"
+        },
+        {
+            id: "wikimedia",
+            name: "WikiMedia Sound Logo Entry",
+            description: "My entry to a contest for a Chime for Wikimedia, the Wikipedia for sound. ",
+            date: "06/12/2025",
+            duration: "1m 51s"
         }
     ]
 </script>
@@ -82,8 +96,8 @@
                             </div>
                             
                             <div class="flex flex-col justify-center text-sm text-gray-700">
-                                <span>{musicData.date}</span>
-                                <span class="text-sm font-normal ">{musicData.duration}</span>
+                                <!-- <span>{musicData.date}</span> -->
+                                <span class="text-sm font-normal text-nowrap ">{musicData.duration}</span>
                             </div>
                         </div>
                     </div>
@@ -100,4 +114,7 @@
 
             
         </div>  
+
+                <div class="my-32 h-[500x] w-full md:w-[500px] bg-transparent flex items-center">
+</div>
 </div>
