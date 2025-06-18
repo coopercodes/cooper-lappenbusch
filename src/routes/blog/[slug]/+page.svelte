@@ -262,7 +262,7 @@
         <button 
             onclick={prevPage}
             disabled={currentPage === 1}
-            class="px-4 w-20 cursor-pointer  py-2 border border-black text-black hover:bg-black hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-black"
+            class="px-4 w-20 py-2 cursor-pointer border border-black text-black hover:bg-black hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-black"
         >
             Prev
         </button>
@@ -271,7 +271,7 @@
             {#each Array.from({ length: totalPages }, (_, i) => i + 1) as pageNum}
                 <button
                     onclick={() => goToPage(pageNum)}
-                    class="px-3 w-10 cursor-pointer  aspect-square py-2 border border-black text-black hover:bg-black hover:text-white transition-colors {pageNum === currentPage ? 'bg-black text-white' : ''}"
+                    class="px-3 w-10 cursor-pointer aspect-square py-2 border border-black text-black hover:bg-black hover:text-white transition-colors {pageNum === currentPage ? 'bg-black text-white' : ''}"
                 >
                     {pageNum}
                 </button>
