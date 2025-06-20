@@ -283,6 +283,10 @@
         </p>
 
         <p class="text-lg text-black mt-8">
+            Sure, it's not the most impressive thing ever. B
+        </p>
+
+        <p class="text-lg text-black mt-8">
             Note: It is also possible that a node points to multiple topics, but for now I am going to keep it basic. One starting node, and then a defined list of nodes that follow.
         </p>
 
