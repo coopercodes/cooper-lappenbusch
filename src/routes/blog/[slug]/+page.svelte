@@ -3,24 +3,20 @@
     import { goto } from "$app/navigation";
 
     const tagColors = {
-        "Svelte 5": "bg-orange-500",
-        "PostgreSQL": "bg-green-500"
+        "Svelte": "bg-orange-500",
+        "PostgreSQL": "bg-green-500",
+        "General": "bg-neutral-800",
+        "Education": "bg-cyan-600"
     }
 
     const allBlogs = [
         {
-            id: "thisPost",
-            title: "Getting Started with Svelte 5 Runes: A Complete Guide",
-            description: "Learn how to use Svelte 5's new reactivity system with runes like $state, $derived, and $effect. This comprehensive guide covers everything you need to know about the new reactive primitives.",
-            date: "June 15, 2025",
-            tags: ["Svelte 5"]
-        },
-        {
-            id: "postgresql-setup-optimization",
-            title: "PostgreSQL Performance Optimization: Indexing Strategies",
-            description: "Master PostgreSQL indexing techniques to dramatically improve query performance. Learn about B-tree, Hash, GIN, and GiST indexes with practical examples and benchmarks.",
-            date: "June 12, 2025",
-            tags: ["Svelte 5", "PostgreSQL"]
+            id: "educational-sme-agents",
+            title: "Building Subject Matter Expert AI Agents For Educational And Tutoring Usecases",
+            description: "Exploring how we can use LLMs to build knowledge graphs for any sector of education. Evaluating importance, difficulty, and the most efficient learning paths for students.",
+            date: "June 20, 2025",
+            readTime: "15m",
+            tags: ["Education"]
         }
     ];
 
@@ -158,10 +154,10 @@
             <div class="flex justify-between h-4 mt-4">
                 {#if selectedTags.length > 0 || searchText !== ""}
                     <div class="flex items-center">
-                        <h3 class="text-sm text-gray-600 mr-2">{selectedTags.length} filter{selectedTags.length == 1 ? "" : "s"} applied</h3>
+                        <h3 class="text-sm text-gray-600 mr-2">{selectedTags.length + (searchText.length == 0 ? 0 : 1)} filter{(selectedTags.length  + (searchText.length == 0 ? 0 : 1)) == 1 ? "" : "s"} applied</h3>
                         <button
                             onclick={clearFilters}
-                            class="text-sm text-gray-600 hover:text-black transition-colors underline"
+                            class="text-sm text-gray-600 hover:text-black transition-colors underline cursor-pointer"
                         >
                             Clear filters
                         </button>

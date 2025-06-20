@@ -147,9 +147,36 @@
             So I started thinking. How can I build a better portfolio? One that doesn't feel like my software projects, and better represents who I am cohesively?
         </p>
 
-        <p class="text-lg text-black mt-4">
-            So I decided to answering some questions. If you're on the pursuit of a better portfolio, it might worthwhile to consider these questions as well.
+        <div class="flex items-center  mt-16">
+            <p class="text-2xl font-bold text-black">
+                I Have My Ethos, Now What?
+            </p>
+            <div class="w-[128px] h-[1px] bg-black ml-8"></div>
+        </div>
+
+        <p class="text-lg text-black mt-8">
+            I've defined what I want to portray through my portfolio site, but now I have to think about how can I use design effectively to portray my message. I wanted to showcase thoughts and ideas, so I gravitated towards designs which were more text heavy and less art heavy. I wanted to showcase written ideas.
         </p>
+
+        <p class="text-lg text-black mt-8">
+            I naturally settled on the idea of copying design inspiration from magazines, newspapers, and other text heavy content sites. Great artists copy? Sure.
+        </p>
+
+        <div class="w-full flex flex-col items-center mt-8">
+        <img 
+            src="/posts/on-portfolio-design/projectShowcase.png" 
+            alt="Project showcase design" 
+            class="w-full h-auto border border-black "
+        />
+        <p class="text-gray-500 text-sm text-center mt-4 italic">
+            Magazine-inspired layout with columns and text-heavy design
+        </p>
+    </div>
+
+        <p class="text-lg text-black mt-8">
+            Side note: I found this PDF which discusses the importance of columns and sidebars in magazine layouts, definitely an interesting read if this type of design resonates with you. <a class="text-blue-600 underline" href="https://www.momentumpress.com/Resources/Type_2/Columns%E2%80%94Part%201.pdf">link to pdf</a>
+        </p>
+
 
     <div class="my-32 h-[800px] w-full md:w-[500px] bg-transparent flex items-center">
     </div>
