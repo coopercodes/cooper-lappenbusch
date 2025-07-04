@@ -1,5 +1,7 @@
 
 <script lang="ts">
+    import MainCarousel from "$lib/MainCarousel.svelte";
+
 
     let carousels: any = $state({
         arcana: [
@@ -86,7 +88,7 @@
 
 <div class="  pt-[124px] flex flex-col items-center mx-6 md:mx-0">
 
-    <div class="w-full mx-12 aspect-[7/4] md:w-[700px] md:h-[400px] rounded-[10px] relative overflow-hidden shadow-2xl" 
+    <!-- <div class="w-full mx-12 aspect-[7/4] md:w-[700px] md:h-[400px] rounded-[10px] relative overflow-hidden shadow-2xl" 
          style="background-image: url('arcanaScreen.png'); background-size: cover; background-position: center;">
         
         <div class="absolute bottom-0 left-0 w-full h-24 md:h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[10px]"></div>
@@ -103,7 +105,9 @@
         <div class="w-16 h-3 bg-neutral-500  cursor-pointer"></div>
         <div class="w-16 h-3 bg-neutral-500  cursor-pointer"></div>
         <div class="w-16 h-3 bg-neutral-500  cursor-pointer"></div>
-    </div>
+    </div> -->
+
+    <MainCarousel />
 
     
     <div class="flex flex-col w-full md:w-max mt-12 md:mt-16 md:flex-row md:items-center">
@@ -141,9 +145,13 @@
                 <div class="flex items-center space-x-6">
                     <p class="text-3xl md:text-4xl font-bold">Arcana</p>
                     <div class="w-full bg-black h-[1px]"></div>
-                    <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border  border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
+                    <!-- <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border  border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
                         Read The Post
-                    </button>
+                    </button> -->
+
+                    <div class="bg-blue-600 hover:text-black border  border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
+                        Read The Post
+                    </div>
                 </div>
                 <div class="flex md:hidden items-center relative my-4 mt-6" >
                     
@@ -647,10 +655,12 @@ click your tag (ex: Studying),  and start tracking your time.
         <div class="flex-1 flex items-center justify-center">
             <div class="w-full md:max-w-xl">
                 <h1 class="text-5xl font-bold text-black pb-2">Let's Work</h1>
-                <p class="text-lg mb-2 text-black">I'm for hire. Need educational products built? Let's do it. Need a solid player for your next startup? I'm there. Reach out and let's talk.</p>
-                <p class="mb-8 text-sm">email - cooper.lappenbusch@gmail.com</p>
+                <p class="text-lg mb-4 text-black">I'm for hire. Need educational products built? Let's do it. Need a solid player for your next startup? I'm there. Reach out and let's talk.</p>
+                <p class="mb-0 text-sm">email (click to copy)</p>
+                <p class="text-2xl mb-4 cursor-pointer">cooper.lappenbusch@gmail.com</p>
+                <p class=" mb-4 text-black">Send me an email. I respond to every single email I receive.</p>
 
-                <form class="space-y-6">
+                <!-- <form class="space-y-6">
                     <div>
                         <label class="block text-sm font-medium text-neutral-700 mb-2">Name</label>
                         <input type="text" class="w-full h-12 bg-neutral-200 border-0 rounded px-4 focus:outline-none focus:ring-2 focus:ring-orange-500">
@@ -670,7 +680,7 @@ click your tag (ex: Studying),  and start tracking your time.
                         Send To Cooper
                     </button>
                     
-                </form>
+                </form> -->
             </div>
         </div>
     </div>
