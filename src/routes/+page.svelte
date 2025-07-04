@@ -1,40 +1,86 @@
 
 <script lang="ts">
 
-    let images = [
-        {
-            url: 'arcanaScreen.png',
-            title: 'Easy to use',
-            description: 'Users select a tag and then press start to begin a focus session'
-        },
-        {
-            url: 'arcanaIntegrated.png',
-            title: 'Windows, MacOS, Linux Integrations',
-            description: 'Arcana exists at the OS level, giving users a better sense of their time'
-        },
-        {
-            url: 'arcanaAnalytics.png',
-            title: 'Calendar Integration',
-            description: 'Local SQLite DB saves user sessions instantly'
-        }
-    ];
+    let carousels: any = $state({
+        arcana: [
+            {
+                url: 'arcanaScreen.png',
+                title: 'Easy to use',
+                description: 'Users select a tag and then press start to begin a focus session'
+            },
+            {
+                url: 'arcanaIntegrated.png',
+                title: 'Windows, MacOS, Linux Integrations',
+                description: 'Arcana exists at the OS level, giving users a better sense of their time'
+            },
+            {
+                url: 'arcanaAnalytics.png',
+                title: 'Calendar Integration',
+                description: 'Local SQLite DB saves user sessions instantly'
+            }
+        ],
+        deskspacing: [
+            {
+                url: 'projects/deskspacing1.png',
+                title: 'Dashboard Overview',
+                description: 'Clean interface showing all your tasks and projects'
+            },
+            {
+                url: 'projects/deskspacing2.png',
+                title: 'Kanban Board',
+                description: 'Drag and drop tasks between columns'
+            }
+        ],
+        coderprep: [
+            {
+                url: 'projects/coderprep/coderprep1.png',
+                title: 'Learning Roadmaps',
+                description: 'Developed a roadmaps interface for learning journeys.'
+            },
+            {
+                url: 'projects/coderprep/coderprep2.png',
+                title: 'In Depth Courses',
+                description: 'Courses on CoderPrep featured videos, testing games, and articles.'
+            },
+            {
+                url: 'projects/coderprep/coderprep3.png',
+                title: 'Simplified Learning UI',
+                description: 'CoderPrep was designed like a textbook, with minmal distractions.'
+            }
+        ]
+    });
 
-    // Current active image index
-    let currentIndex = $state(0);
+    // Current index for each carousel
+    let indices: any = $state({
+        arcana: 0,
+        deskspacing: 0,
+        coderprep: 0
+    });
 
-    // Function to change to specific image
-    function goToImage(index) {
-        currentIndex = index;
+    // Navigation functions
+    function goToImage(carouselId, index) {
+        indices[carouselId] = index;
     }
 
-    // Function to go to next image
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
+    function nextImage(carouselId) {
+        const images = carousels[carouselId];
+        indices[carouselId] = (indices[carouselId] + 1) % images.length;
     }
 
-    // Function to go to previous image
-    function previousImage() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
+    function previousImage(carouselId) {
+        const images = carousels[carouselId];
+        indices[carouselId] = (indices[carouselId] - 1 + images.length) % images.length;
+    }
+
+    // Add new carousel
+    function addCarousel(id, images) {
+        carousels[id] = images;
+        indices[id] = 0;
+    }
+
+    // Get current image for a carousel
+    function getCurrentImage(carouselId) {
+        return carousels[carouselId][indices[carouselId]];
     }
 </script>
 
@@ -87,6 +133,7 @@
         </div>
     </div>
 
+    <!-- ARCANA PROJECT START -->
     <div class="w-full md:w-[1300px]  "> <!-- h-[500px] -->
         <div class="flex h-full md:mt-0 ">
             
@@ -94,36 +141,36 @@
                 <div class="flex items-center space-x-6">
                     <p class="text-3xl md:text-4xl font-bold">Arcana</p>
                     <div class="w-full bg-black h-[1px]"></div>
-                    <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
+                    <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border  border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
                         Read The Post
                     </button>
                 </div>
                 <div class="flex md:hidden items-center relative my-4 mt-6" >
                     
                     <div class="aspect-[7/4.5] w-full rounded-[12px] relative overflow-hidden shadow-xl transition-opacity  duration-500 ease-in-out" 
-                        style="background-image: url('{images[currentIndex].url}'); background-size: cover; background-position: center;">
+                        style="background-image: url('{carousels['arcana'][indices['arcana']].url}'); background-size: cover; background-position: center;">
                         
                         <div class="absolute z-10 bottom-0 w-full h-20 md:h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[12px]"></div>                        
                         
 
                          <div class="absolute md:hidden  bottom-4 left-4 z-20 backdrop-blur-md  rounded-lg px-2 py-1 shadow-lg">
                             <p class="md:text-xl font-semibold text-sm drop-shadow-lg transition-all duration-300 text-white">
-                                {images[currentIndex].title}
+                                {carousels['arcana'][indices['arcana']].title}
                             </p>
                         </div>
 
                         <div class="hidden md:absolute  bottom-6 left-6 z-20 backdrop-blur-md bg-[#273F4F]/10 border border-white/30 rounded-lg px-4 py-3 shadow-lg">
                             <p class="md:text-xl font-semibold mb-0.5 drop-shadow-lg transition-all duration-300 text-white">
-                                {images[currentIndex].title}
+                                {carousels['arcana'][indices['arcana']].title}
                             </p>
                             <p class="text-[12px] md:text-sm opacity-100 drop-shadow-md transition-all duration-300 max-w-md text-white">
-                                {images[currentIndex].description}
+                                {carousels['arcana'][indices['arcana']].description}
                             </p>
                         </div>
 
                         <button 
                             class="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
-                            onclick={previousImage}
+                            onclick={() => previousImage('arcana')}
                             aria-label="Previous image"
                         >
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -133,7 +180,7 @@
 
                         <button 
                         class="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
-                        onclick={nextImage}
+                        onclick={() => nextImage('arcana')}
                         aria-label="Next image">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -201,21 +248,21 @@ click your tag (ex: Studying),  and start tracking your time.
                 <div class="flex items-center relative" >
                     
                     <div class="w-full h-[400px] rounded-[12px] relative overflow-hidden shadow-xl transition-opacity  duration-500 ease-in-out" 
-                        style="background-image: url('{images[currentIndex].url}'); background-size: cover; background-position: center;">
+                        style="background-image: url('{carousels['arcana'][indices['arcana']].url}'); background-size: cover; background-position: center;">
                         
                         <div class="absolute z-10 bottom-0 left-0 w-full h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[12px]"></div>                        
                                 <div class="absolute bottom-6 left-6 z-20 backdrop-blur-md bg-[#273F4F]/10 border border-white/30 rounded-lg px-4 py-3 shadow-lg">
                             <p class="text-xl font-bold mb-0.5 drop-shadow-lg transition-all duration-300 text-white">
-                                {images[currentIndex].title}
+                                {carousels['arcana'][indices['arcana']].title}
                             </p>
                             <p class="text-sm opacity-90 drop-shadow-md transition-all duration-300 max-w-md text-white">
-                                {images[currentIndex].description}
+                                {carousels['arcana'][indices['arcana']].description}
                             </p>
                         </div>
 
                         <button 
                             class="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
-                            onclick={previousImage}
+                            onclick={() => previousImage('arcana')}
                             aria-label="Previous image"
                         >
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -225,7 +272,7 @@ click your tag (ex: Studying),  and start tracking your time.
 
                         <button 
                         class="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
-                        onclick={nextImage}
+                        onclick={() => nextImage('arcana')}
                         aria-label="Next image">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -235,39 +282,342 @@ click your tag (ex: Studying),  and start tracking your time.
                 </div>
 
                 <div class="mt-4  justify-center space-x-4 hidden md:flex">
-                    {#each images as image, index}
+                    {#each carousels['arcana'] as image, index}
                         <button
-                        class="w-24 h-16 cursor-pointer antialiased rounded-lg overflow-hidden border-2 transition-all duration-200 {index === currentIndex ? 'border-[#FE7743] scale-105' : 'border-gray-300 hover:border-[#FE7743]/60'}"
-                        onclick={() => goToImage(index)}
-                        style="background-image: url('{image.url}'); background-size: cover; background-position: center;">
+                            class="w-24 h-16 cursor-pointer antialiased rounded-lg overflow-hidden border-2 transition-all duration-200 {index === indices['arcana'] ? 'border-[#FE7743] scale-105' : 'border-gray-300 hover:border-[#FE7743]/60'}"
+                            onclick={() => goToImage('arcana', index)}
+                            style="background-image: url('{image.url}'); background-size: cover; background-position: center;"
+                        >
                         </button>
                     {/each}
                 </div>
-                <!-- <div class="flex  w-full h-[72px] bg-[#273F4F] mt-4 items-center px-4 ">
-                    <p class="text-white font-extrabold leading-6.5 text-2xl">Tech <br/> Stack</p>
-                   
-                    <div class="flex items-center  w-full justify-around overflow-hidden">
-                         <div class="flex flex-col overflow-hidden items-center space-x-4 pl-2">
-                            <div class="w-[8px] h-[20px] bg-white"></div>
-                            <div class="w-[8px] h-[20px] bg-white"></div>
-                        </div>
-                        <p class="text-white leading-6.5 text-2xl">TypeScript</p>
-                        <p class="text-white leading-6.5 text-2xl">Rust</p>
-                        <p class="text-white leading-6.5 text-2xl">Svelte 5</p>
-                                                <p class="text-white leading-6.5 text-2xl">Tauri 2.0</p>
-
-                    </div>
-                    
-                </div> -->
+                
             </div>
              
         </div>
     </div>
+    <!-- ARCANA PROJECT END -->
 
-
-    <!-- <div class="my-32 h-[500x] w-[500px] bg-transparent flex items-center">
+    
+    <div class="my-24 mx-4 md:my-40 w-full h-[1px]  md:w-[500px] bg-neutral-400 flex items-center">
         
-    </div> -->
+    </div>
+
+    <!-- CODERPREP PROJECT START -->
+    <div class="w-full md:w-[1300px]  "> <!-- h-[500px] -->
+        <div class="flex h-full md:mt-0 ">
+            
+            <div class="flex flex-col w-full  md:w-[630px]">
+                <div class="flex items-center space-x-6">
+                    <p class="text-3xl md:text-4xl font-bold">CoderPrep</p>
+                    <div class="w-full bg-black h-[1px]"></div>
+                    <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
+                        Read The Post
+                    </button>
+                </div>
+                <div class="flex md:hidden items-center relative my-4 mt-6" >
+                    
+                    <div class="aspect-[7/4.5] w-full rounded-[12px] relative overflow-hidden shadow-xl transition-opacity  duration-500 ease-in-out" 
+                        style="background-image: url('{carousels['coderprep'][indices['coderprep']].url}'); background-size: cover; background-position: center;">
+                        
+                        <div class="absolute z-10 bottom-0 w-full h-20 md:h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[12px]"></div>                        
+                        
+
+                         <div class="absolute md:hidden  bottom-4 left-4 z-20 backdrop-blur-md  rounded-lg px-2 py-1 shadow-lg">
+                            <p class="md:text-xl font-semibold text-sm drop-shadow-lg transition-all duration-300 text-white">
+                                {carousels['coderprep'][indices['coderprep']].title}
+                            </p>
+                        </div>
+
+                        <div class="hidden md:absolute  bottom-6 left-6 z-20 backdrop-blur-md bg-[#273F4F]/10 border border-white/30 rounded-lg px-4 py-3 shadow-lg">
+                            <p class="md:text-xl font-semibold mb-0.5 drop-shadow-lg transition-all duration-300 text-white">
+                                {carousels['coderprep'][indices['coderprep']].title}
+                            </p>
+                            <p class="text-[12px] md:text-sm opacity-100 drop-shadow-md transition-all duration-300 max-w-md text-white">
+                                {carousels['coderprep'][indices['coderprep']].description}
+                            </p>
+                        </div>
+
+                        <button 
+                            class="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
+                            onclick={() => previousImage('coderprep')}
+                            aria-label="Previous image"
+                        >
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+
+                        <button 
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
+                        onclick={() => nextImage('coderprep')}
+                        aria-label="Next image">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        </button>
+                    </div>
+                </div>
+                <p class="text-lg md:text-xl mt-4 pr-0">
+                    CoderPrep was my first attempt at building a complete online learning platform. We did a bunch, from building content, customer interviews, building a design ethos, and creating a unique learning approach.
+                </p>
+                <div class="flex items-center my-4">
+                    <div class="w-full bg-black h-[1px] "></div>
+                    <div class="w-[70px]"></div>
+                    <div class="w-[1px] bg-transparent h-[16px] "></div>
+                </div>
+
+                <div class="flex space-x-4">
+                    <div class="flex flex-col">
+                        <p class="text-lg md:text-xl font-bold pr-0">
+                        What I Learned
+                        </p>
+                        <p class="text-lg md:text-xl mt-2 pr-0">
+                            The ideas I had regarding education didn't seem to be unique to software engineering, so I decided to shut down CoderPrep and start Scrol. <br/> <br/> I learned a little bit of everything here, and this broader perspective gave me the skills to build Scroll in a more effective way. 
+                        </p>
+                    </div>
+                     <div class="flex flex-col w-[300px] h-full bg-[#273F4F]   px-4 ">
+                        <div class="flex items-center justify-between pt-4 w-full">
+                            <p class="text-white font-extrabold leading-6.5 text-lg">Tech Stack</p>
+                            <div class="flex flex-col overflow-hidden items-center space-x-4 pl-2">
+                                <div class="w-[8px] h-[20px] bg-white"></div>
+                                <div class="w-[8px] h-[20px] bg-white"></div>
+                            </div>
+                        </div>
+
+                        <div class="w-full h-[1px] bg-white my-2"></div>
+                    
+                        <div class="flex flex-col space-y-2 text-lg  w-full justify-around overflow-hidden">
+                            
+                            <p class="text-white text-left leading-6.5 ">Svelte</p>
+                            <p class="text-white leading-6.5 ">PostgreSQL</p>
+                            <p class="text-white leading-6.5 ">Supabase</p>
+                            <!-- <p class="text-white leading-6.5"></p> -->
+
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <!-- DIVIDER HERE, ONLY SHOW ON DESKTOP -->
+            <div class="w-[1px] h-full bg-transparent mx-12 md:flex hidden"></div>
+             
+            <div class=" flex-col justify-center w-[750px] hidden md:flex  ">
+                <div class="flex items-center relative" >
+                    
+                    <div class="w-full h-[400px] rounded-[12px] relative overflow-hidden shadow-xl transition-opacity  duration-500 ease-in-out" 
+                        style="background-image: url('{carousels['coderprep'][indices['coderprep']].url}'); background-size: cover; background-position: center;">
+                        
+                        <div class="absolute z-10 bottom-0 left-0 w-full h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[12px]"></div>                        
+                                <div class="absolute bottom-6 left-6 z-20 backdrop-blur-md bg-[#273F4F]/10 border border-white/30 rounded-lg px-4 py-3 shadow-lg">
+                            <p class="text-xl font-bold mb-0.5 drop-shadow-lg transition-all duration-300 text-white">
+                                {carousels['coderprep'][indices['coderprep']].title}
+                            </p>
+                            <p class="text-sm opacity-90 drop-shadow-md transition-all duration-300 max-w-md text-white">
+                                {carousels['coderprep'][indices['coderprep']].description}
+                            </p>
+                        </div>
+
+                        <button 
+                            class="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
+                            onclick={() => previousImage('coderprep')}
+                            aria-label="Previous image"
+                        >
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+
+                        <button 
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
+                        onclick={() => nextImage('coderprep')}
+                        aria-label="Next image">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-4  justify-center space-x-4 hidden md:flex">
+                    {#each carousels['coderprep'] as image, index}
+                        <button
+                            class="w-24 h-16 cursor-pointer antialiased rounded-lg overflow-hidden border-2 transition-all duration-200 {index === indices['coderprep'] ? 'border-[#FE7743] scale-105' : 'border-gray-300 hover:border-[#FE7743]/60'}"
+                            onclick={() => goToImage('coderprep', index)}
+                            style="background-image: url('{image.url}'); background-size: cover; background-position: center;"
+                        >
+                        </button>
+                    {/each}
+                </div>
+                
+            </div>
+             
+        </div>
+    </div>
+    <!-- CODERPREP PROJECT END -->
+
+    <div class="my-24 mx-4 md:my-40 w-full h-[1px]  md:w-[500px] bg-neutral-400 flex items-center">
+        
+    </div>
+
+    <!-- DESKSPACING PROJECT START -->
+    <div class="w-full md:w-[1300px]  "> <!-- h-[500px] -->
+        <div class="flex h-full md:mt-0 ">
+            
+            <div class="flex flex-col w-full  md:w-[630px]">
+                <div class="flex items-center space-x-6">
+                    <p class="text-3xl md:text-4xl font-bold">DeskSpacing</p>
+                    <div class="w-full bg-black h-[1px]"></div>
+                    <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
+                        Read The Post
+                    </button>
+                </div>
+                <div class="flex md:hidden items-center relative my-4 mt-6" >
+                    
+                    <div class="aspect-[7/4.5] w-full rounded-[12px] relative overflow-hidden shadow-xl transition-opacity  duration-500 ease-in-out" 
+                        style="background-image: url('{carousels['deskspacing'][indices['deskspacing']].url}'); background-size: cover; background-position: center;">
+                        
+                        <div class="absolute z-10 bottom-0 w-full h-20 md:h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[12px]"></div>                        
+                        
+
+                         <div class="absolute md:hidden  bottom-4 left-4 z-20 backdrop-blur-md  rounded-lg px-2 py-1 shadow-lg">
+                            <p class="md:text-xl font-semibold text-sm drop-shadow-lg transition-all duration-300 text-white">
+                                {carousels['deskspacing'][indices['deskspacing']].title}
+                            </p>
+                        </div>
+
+                        <div class="hidden md:absolute  bottom-6 left-6 z-20 backdrop-blur-md bg-[#273F4F]/10 border border-white/30 rounded-lg px-4 py-3 shadow-lg">
+                            <p class="md:text-xl font-semibold mb-0.5 drop-shadow-lg transition-all duration-300 text-white">
+                                {carousels['deskspacing'][indices['deskspacing']].title}
+                            </p>
+                            <p class="text-[12px] md:text-sm opacity-100 drop-shadow-md transition-all duration-300 max-w-md text-white">
+                                {carousels['deskspacing'][indices['deskspacing']].description}
+                            </p>
+                        </div>
+
+                        <button 
+                            class="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
+                            onclick={() => previousImage('deskspacing')}
+                            aria-label="Previous image"
+                        >
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+
+                        <button 
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
+                        onclick={() => nextImage('deskspacing')}
+                        aria-label="Next image">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        </button>
+                    </div>
+                </div>
+                <p class="text-lg md:text-xl mt-4 pr-0">
+                    DeskSpacing.com is my first complete website, which turned out to be a surprising success with over 1,500,000 unique visitors. The idea was simple, a 3D interface that allows you to build desk setups (keyboards, monitors, etc.).
+                </p>
+                <div class="flex items-center my-4">
+                    <div class="w-full bg-black h-[1px] "></div>
+                    <div class="w-[70px]"></div>
+                    <div class="w-[1px] bg-transparent h-[16px] "></div>
+                </div>
+
+                <div class="flex space-x-4">
+                    <div class="flex flex-col">
+                        <p class="text-lg md:text-xl font-bold pr-0">
+                        What I Learned
+                        </p>
+                        <p class="text-lg md:text-xl mt-2 pr-0">
+                            Users love to play, build, and have fun. DeskSpacing is great because users are instantly able to start building, testing, and creating their dream setups.
+                            <br/> <br/>
+                            Users also don't care about your fancy tech stack. No framework for this project, literally just HTML / CSS / JS and Three.js.
+                        </p>
+                    </div>
+                     <div class="flex flex-col w-[300px] h-full bg-[#273F4F]   px-4 ">
+                        <div class="flex items-center justify-between pt-4 w-full">
+                            <p class="text-white font-extrabold leading-6.5 text-lg">Tech Stack</p>
+                            <div class="flex flex-col overflow-hidden items-center space-x-4 pl-2">
+                                <div class="w-[8px] h-[20px] bg-white"></div>
+                                <div class="w-[8px] h-[20px] bg-white"></div>
+                            </div>
+                        </div>
+
+                        <div class="w-full h-[1px] bg-white my-2"></div>
+                    
+                        <div class="flex flex-col space-y-2 text-lg  w-full justify-around overflow-hidden">
+                            
+                            <p class="text-white text-left leading-6.5 ">HTML</p>
+                            <p class="text-white leading-6.5 ">CSS</p>
+                            <p class="text-white leading-6.5 ">JavaScript</p>
+                            <p class="text-white leading-6.5">Three.js</p>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <!-- DIVIDER HERE, ONLY SHOW ON DESKTOP -->
+            <div class="w-[1px] h-full bg-transparent mx-12 md:flex hidden"></div>
+             
+            <div class=" flex-col justify-center w-[750px] hidden md:flex  ">
+                <div class="flex items-center relative" >
+                    
+                    <div class="w-full h-[400px] rounded-[12px] relative overflow-hidden shadow-xl transition-opacity  duration-500 ease-in-out" 
+                        style="background-image: url('{carousels['deskspacing'][indices['deskspacing']].url}'); background-size: cover; background-position: center;">
+                        
+                        <div class="absolute z-10 bottom-0 left-0 w-full h-32 bg-gradient-to-b to-black from-transparent to-[85%] rounded-bl-[12px]"></div>                        
+                                <div class="absolute bottom-6 left-6 z-20 backdrop-blur-md bg-[#273F4F]/10 border border-white/30 rounded-lg px-4 py-3 shadow-lg">
+                            <p class="text-xl font-bold mb-0.5 drop-shadow-lg transition-all duration-300 text-white">
+                                {carousels['deskspacing'][indices['deskspacing']].title}
+                            </p>
+                            <p class="text-sm opacity-90 drop-shadow-md transition-all duration-300 max-w-md text-white">
+                                {carousels['deskspacing'][indices['deskspacing']].description}
+                            </p>
+                        </div>
+
+                        <button 
+                            class="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
+                            onclick={() => previousImage('deskspacing')}
+                            aria-label="Previous image"
+                        >
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+
+                        <button 
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-200 opacity-100 md:opacity-0 hover:opacity-100 group-hover:opacity-100"
+                        onclick={() => nextImage('deskspacing')}
+                        aria-label="Next image">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-4  justify-center space-x-4 hidden md:flex">
+                    {#each carousels['deskspacing'] as image, index}
+                        <button
+                            class="w-24 h-16 cursor-pointer antialiased rounded-lg overflow-hidden border-2 transition-all duration-200 {index === indices['deskspacing'] ? 'border-[#FE7743] scale-105' : 'border-gray-300 hover:border-[#FE7743]/60'}"
+                            onclick={() => goToImage('deskspacing', index)}
+                            style="background-image: url('{image.url}'); background-size: cover; background-position: center;"
+                        >
+                        </button>
+                    {/each}
+                </div>
+                
+            </div>
+             
+        </div>
+    </div>
+    <!-- DESKSPACING PROJECT END -->
+
+    
     <div class="my-24 mx-4 md:my-40 w-full h-[1px]  md:w-[500px] bg-neutral-400 flex items-center">
         
     </div>

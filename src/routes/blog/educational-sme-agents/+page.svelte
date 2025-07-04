@@ -131,7 +131,7 @@
         
         <div class="flex items-center w-full  mt-12">
             <div class="flex flex-col w-full ">
-                <h1 class="text-5xl font-bold text-black mb-4 leading-14 mr-24">Subject Matter Expert AI Agents For Education</h1>
+                <h1 class="text-5xl font-bold text-black mb-4 leading-14 mr-24">Using LLMs To Build Knowledge Graphs</h1>
                 <p class=" text-black w-full pr-12 md:pr-0 md:w-[400px]">
                     Exploring how we can use LLMs to build knowledge graphs for any sector of education. 
                 </p>
@@ -222,7 +222,7 @@
         </p>
 
         <p class="text-lg text-black mt-8">
-            Why does this all matter for education? Knowledge graphs matter because we can use them as a source of truth for learners. Instead of telling an LLM "teach me division", we can tell it "teach me division, knowing that I already know addition and subtraction", allowing for more targeted and effective learning with data based learning systems. The flaw of LLMs is their generality, by creating knowledge graphs and effective context we can reduce that flaw signifigantly.
+            Why does this all matter for education? Knowledge graphs matter because we can use them as a source of truth for learners. Instead of telling an LLM "teach me division", we can tell it "teach me division, knowing that I already know addition and subtraction", allowing for more targeted and effective learning with data based learning systems. The flaw of LLMs is their generality, by creating knowledge graphs and effective context we can reduce the flaw of generality in a signifigant way.
         </p>
 
         <div class="flex items-center  mt-16">
@@ -292,6 +292,21 @@
 
         <p class="text-lg text-black mt-8">
             To test my theories, I built a basic SME Agent playground. It features a chat box and a graph structure that updates as you make requests to the agent.
+        </p>
+
+        <div class="flex items-center  mt-16">
+            <p class="text-2xl font-bold text-black">
+                Tunneling, Graph Backtracking For Learning
+            </p>
+            <div class="w-[128px] h-[1px] bg-black ml-8"></div>
+        </div>
+
+        <p class="text-lg text-black mt-8">
+            This is likely the most interesting discovery from building SME knowledge graphs. We can take a given node in a graph, and ask to create another knowledge graph of the given node. This gives depth to the overall learning structure, and establishes more practical ways of learning certain concepts.
+        </p>
+
+        <p class="text-lg text-black mt-8">
+            This is a bold claim for a random blog post, but I believe that effective tunneling systems are likely the key to a new generation of online learning websites. 
         </p>
 
         <!-- <p class="text-lg text-black mt-8">

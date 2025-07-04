@@ -11,10 +11,18 @@
 
     const allBlogs = [
         {
+            id: "knowledge-tunneling",
+            title: "Knowledge Tunneling | Building Multi Layered Knowledge Graphs For Optimal Learning",
+            description: "Multi layered knowledge graph? Wha is this guy talking about? Hear me out.",
+            date: "June 24, 2025",
+            readTime: "15m",
+            tags: ["Education"]
+        },
+        {
             id: "educational-sme-agents",
-            title: "Building Subject Matter Expert AI Agents For Educational And Tutoring Usecases",
+            title: "Using LLMs To Build Knowledge Graphs",
             description: "Exploring how we can use LLMs to build knowledge graphs for any sector of education. Evaluating importance, difficulty, and the most efficient learning paths for students.",
-            date: "June 20, 2025",
+            date: "June 22, 2025",
             readTime: "15m",
             tags: ["Education"]
         }
