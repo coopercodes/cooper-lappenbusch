@@ -16,7 +16,7 @@
         {
             name: 'CoderPrep',
             description: 'Learning roadmaps and simplified education',
-            image: 'projects/coderprep/coderprep1.png',
+            image: 'projects/coderprep/coderprep3.png',
             color: '#FE7743'
         }
     ];

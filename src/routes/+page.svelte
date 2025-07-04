@@ -149,7 +149,7 @@
                         Read The Post
                     </button> -->
 
-                    <div class="bg-blue-600 hover:text-black border  border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
+                    <div class="bg-[#FE7743] cursor-default  border  border-transparent  transition-all duration-200 px-4 text-sm text-transparent rounded-[8px] font-bold text-nowrap">
                         Read The Post
                     </div>
                 </div>
@@ -319,9 +319,12 @@ click your tag (ex: Studying),  and start tracking your time.
                 <div class="flex items-center space-x-6">
                     <p class="text-3xl md:text-4xl font-bold">CoderPrep</p>
                     <div class="w-full bg-black h-[1px]"></div>
-                    <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
+                    <!-- <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
                         Read The Post
-                    </button>
+                    </button> -->
+                    <div class="bg-[#FE7743] cursor-default  border  border-transparent  transition-all duration-200 px-4 text-sm text-transparent rounded-[8px] font-bold text-nowrap">
+                        Read The Post
+                    </div>
                 </div>
                 <div class="flex md:hidden items-center relative my-4 mt-6" >
                     
@@ -477,9 +480,12 @@ click your tag (ex: Studying),  and start tracking your time.
                 <div class="flex items-center space-x-6">
                     <p class="text-3xl md:text-4xl font-bold">DeskSpacing</p>
                     <div class="w-full bg-black h-[1px]"></div>
-                    <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
+                    <!-- <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
                         Read The Post
-                    </button>
+                    </button> -->
+                    <div class="bg-[#FE7743] cursor-default  border  border-transparent  transition-all duration-200 px-4 text-sm text-transparent rounded-[8px] font-bold text-nowrap">
+                        Read The Post
+                    </div>
                 </div>
                 <div class="flex md:hidden items-center relative my-4 mt-6" >
                     
