@@ -24,13 +24,13 @@
         deskspacing: [
             {
                 url: 'projects/deskspacing1.png',
-                title: 'Dashboard Overview',
-                description: 'Clean interface showing all your tasks and projects'
+                title: 'Easy To Use',
+                description: 'A simplified 3D interface allows anyone to build with DeskSpacing'
             },
             {
                 url: 'projects/deskspacing2.png',
-                title: 'Kanban Board',
-                description: 'Drag and drop tasks between columns'
+                title: 'Custom Item Selection / Skins',
+                description: 'The interface allows for easy item addition and item styling'
             }
         ],
         coderprep: [
@@ -384,7 +384,7 @@ click your tag (ex: Studying),  and start tracking your time.
                         What I Learned
                         </p>
                         <p class="text-lg md:text-xl mt-2 pr-0">
-                            The ideas I had regarding education didn't seem to be unique to software engineering, so I decided to shut down CoderPrep and start Scrol. <br/> <br/> I learned a little bit of everything here, and this broader perspective gave me the skills to build Scroll in a more effective way. 
+                            The ideas I had regarding education didn't seem to be unique to software engineering, so I decided to shut down CoderPrep and start Scroll. <br/> <br/> I learned a little bit of everything here, and this broader perspective gave me the skills to build Scroll in a more effective way. 
                         </p>
                     </div>
                      <div class="flex flex-col w-[300px] h-full bg-[#273F4F]   px-4 ">
