@@ -152,7 +152,7 @@
                     <!-- <div class="bg-[#FE7743] cursor-default  border  border-transparent  transition-all duration-200 px-4 text-sm text-transparent rounded-[8px] font-bold text-nowrap">
                         Read The Post
                     </div> -->
-                    <div class=" text-black cursor-default border border-transparent transition-all duration-200 px-2 pr-0 font-black text-nowrap">
+                    <div class=" text-black border border-transparent transition-all duration-200 px-2 pr-0  text-nowrap">
                         MAY 2025 <span class="px-2">-</span> CURRENT
                     </div>
                 </div>
@@ -331,7 +331,7 @@ click your tag (ex: Studying),  and start tracking your time.
                     <!-- <div class=" text-black cursor-default border border-transparent transition-all duration-200 px-4 pr-0 py-1 font-black text-nowrap">
                         JAN 2024 <span class="px-2">-</span> DEC 2024
                     </div> -->
-                    <div class=" text-black cursor-default border border-transparent transition-all duration-200 px-2 pr-0 font-black text-nowrap">
+                    <div class=" text-black border border-transparent transition-all duration-200 px-2 pr-0  text-nowrap">
                         JAN 2024<span class="px-2">-</span>JAN 2025
                     </div>
                 </div>
@@ -495,7 +495,7 @@ click your tag (ex: Studying),  and start tracking your time.
                     <!-- <div class="bg-[#FE7743] cursor-default  border  border-transparent  transition-all duration-200 px-4 text-sm text-transparent rounded-[8px] font-bold text-nowrap">
                         Read The Post
                     </div> -->
-                    <div class=" text-black cursor-default border border-transparent transition-all duration-200 px-2 pr-0 font-black text-nowrap">
+                    <div class=" text-black  border border-transparent transition-all duration-200 px-2 pr-0 text-nowrap">
                         JUNE 2020<span class="px-2">-</span>OCT 2020
                   
                     </div>
