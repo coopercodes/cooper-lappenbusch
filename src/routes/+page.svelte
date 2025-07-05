@@ -149,8 +149,11 @@
                         Read The Post
                     </button> -->
 
-                    <div class="bg-[#FE7743] cursor-default  border  border-transparent  transition-all duration-200 px-4 text-sm text-transparent rounded-[8px] font-bold text-nowrap">
+                    <!-- <div class="bg-[#FE7743] cursor-default  border  border-transparent  transition-all duration-200 px-4 text-sm text-transparent rounded-[8px] font-bold text-nowrap">
                         Read The Post
+                    </div> -->
+                    <div class=" text-black cursor-default border border-transparent transition-all duration-200 px-2 pr-0 font-black text-nowrap">
+                        MAY 2025 <span class="px-2">-</span> CURRENT
                     </div>
                 </div>
                 <div class="flex md:hidden items-center relative my-4 mt-6" >
@@ -322,8 +325,14 @@ click your tag (ex: Studying),  and start tracking your time.
                     <!-- <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
                         Read The Post
                     </button> -->
-                    <div class="bg-[#FE7743] cursor-default  border  border-transparent  transition-all duration-200 px-4 text-sm text-transparent rounded-[8px] font-bold text-nowrap">
+                    <!-- <div class="bg-[#FE7743] cursor-default  border  border-transparent  transition-all duration-200 px-4 text-sm text-transparent rounded-[8px] font-bold text-nowrap">
                         Read The Post
+                    </div> -->
+                    <!-- <div class=" text-black cursor-default border border-transparent transition-all duration-200 px-4 pr-0 py-1 font-black text-nowrap">
+                        JAN 2024 <span class="px-2">-</span> DEC 2024
+                    </div> -->
+                    <div class=" text-black cursor-default border border-transparent transition-all duration-200 px-2 pr-0 font-black text-nowrap">
+                        JAN 2024<span class="px-2">-</span>JAN 2025
                     </div>
                 </div>
                 <div class="flex md:hidden items-center relative my-4 mt-6" >
@@ -483,8 +492,12 @@ click your tag (ex: Studying),  and start tracking your time.
                     <!-- <button class="bg-[#FE7743] hover:bg-[#FE7743] hover:text-black border border-transparent hover:border-[#FE7743]  transition-all duration-200 cursor-pointer px-4 text-white rounded-[8px] font-bold text-nowrap">
                         Read The Post
                     </button> -->
-                    <div class="bg-[#FE7743] cursor-default  border  border-transparent  transition-all duration-200 px-4 text-sm text-transparent rounded-[8px] font-bold text-nowrap">
+                    <!-- <div class="bg-[#FE7743] cursor-default  border  border-transparent  transition-all duration-200 px-4 text-sm text-transparent rounded-[8px] font-bold text-nowrap">
                         Read The Post
+                    </div> -->
+                    <div class=" text-black cursor-default border border-transparent transition-all duration-200 px-2 pr-0 font-black text-nowrap">
+                        JUNE 2020<span class="px-2">-</span>OCT 2020
+                  
                     </div>
                 </div>
                 <div class="flex md:hidden items-center relative my-4 mt-6" >

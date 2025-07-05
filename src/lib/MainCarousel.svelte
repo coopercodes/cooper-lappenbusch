@@ -9,7 +9,7 @@
         },
         {
             name: 'DeskSpacing',
-            description: 'Clean interface showing all your tasks and projects',
+            description: 'A 3D interface to build your dream desk setup',
             image: 'projects/deskspacing1.png',
             color: '#FE7743'
         },
