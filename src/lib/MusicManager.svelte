@@ -27,6 +27,12 @@
   function stopTrack() {
     musicPlayer.endTrack(musicPlayer.currentTrackId);
   }
+  
+  // Seek functionality
+  function handleSeek(event) {
+    const newTime = parseFloat(event.target.value);
+    musicPlayer.seek(newTime);
+  }
 </script>
 
 {#if musicPlayer.currentTrackId}
@@ -51,9 +57,7 @@
             <span class="w-2">/ </span>
             <span class="w-6.5">{formatTime(musicPlayer.duration)}</span></span>
       </div>
-    </div>
-    
-    <div class="controls">
+      <div class="controls">
       <!-- Play/Pause button -->
       <button class="control-btn" on:click={togglePlayPause}>
         {#if musicPlayer.isPlaying}
@@ -92,6 +96,25 @@
         />
       </div>
     </div>
+    </div>
+    
+    
+    
+    <!-- Seek bar -->
+    <div class="seek-container">
+      <div class="seek-track">
+        <div class="seek-progress" style="width: {(musicPlayer.currentTime / (musicPlayer.duration || 1)) * 100}%"></div>
+      </div>
+      <input
+        type="range"
+        min="0"
+        max={musicPlayer.duration || 0}
+        step="0.1"
+        value={musicPlayer.currentTime || 0}
+        on:input={handleSeek}
+        class="seek-slider"
+      />
+    </div>
   </div>
 {/if}
 
@@ -107,8 +130,8 @@
     color: white;
     padding: 12px 16px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 8px;
     border-radius: 10px;
     z-index: 1000;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -117,6 +140,12 @@
   
   .music-manager.visible {
     transform: translateX(-50%) translateY(0);
+  }
+  
+  .music-manager > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .track-info {
@@ -236,6 +265,98 @@
     border-radius: 50%;
     cursor: pointer;
     border: none;
+  }
+  
+  /* Seek bar styles */
+  .seek-container {
+    width: 100%;
+    padding: 0 4px;
+    position: relative;
+  }
+  
+  /* Background track and progress */
+  .seek-track {
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    right: 4px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .seek-progress {
+    height: 100%;
+    background: #FE7743;
+    border-radius: 3px;
+    transition: width 0.01s ease;
+  }
+  
+  .seek-slider {
+    width: 100%;
+    height: 20px;
+    background: transparent;
+    border-radius: 3px;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Track styling - make transparent since we use background div */
+  .seek-slider::-webkit-slider-runnable-track {
+    height: 6px;
+    background: transparent;
+    border-radius: 3px;
+    border: none;
+  }
+  
+  .seek-slider::-moz-range-track {
+    height: 6px;
+    background: transparent;
+    border-radius: 3px;
+    border: none;
+  }
+  
+  /* Remove Firefox progress since we use our own */
+  .seek-slider::-moz-range-progress {
+    background: transparent;
+  }
+  
+  /* Thumb styling - the draggable handle */
+  .seek-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: rgb(255, 110, 48);
+    /* border: 2px solid white; */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.01s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .seek-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+  }
+  
+  .seek-slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: #FE7743;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.01s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .seek-slider::-moz-range-thumb:hover {
+    transform: scale(1.1);
   }
   
   /* Responsive design */
