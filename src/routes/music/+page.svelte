@@ -15,7 +15,7 @@
             name: "Her",
             description: "A film soundtrack inspired by Her, a simple delayed synth. Nothing special, but exploratory. Love the Her soundtrack :)",
             date: "06/12/2025",
-            duration: "3m 21s"
+            duration: "1m 7s"
         },
         {
             id: "tenet",
@@ -29,7 +29,84 @@
             name: "WikiMedia Sound Logo Entry",
             description: "My entry to a contest for a Chime for Wikimedia, the Wikipedia for sound. ",
             date: "06/12/2025",
-            duration: "1m 51s"
+            duration: "5s"
+        },
+        {
+            id: "clairo",
+            name: "Clairo Stylistic Attempt",
+            description: "This music stemmed from a brief interest in bedroom pop and similar indie genres, not my favorite work but an interesting adventure.",
+            date: "06/12/2025",
+            duration: "2m 12s"
+        },
+        {
+            id: "cracklyAphex",
+            name: "Crackly Aphex Twin Ambient",
+            description: "Drone noise similar to Aphex Twin's main ambient album, \"Selected Ambient Works 85-92.\" A mid-high frequency synth adds texture.",
+            date: "06/12/2025",
+            duration: "1m 54s"
+        },
+        {
+            id: "cyberAmbience",
+            name: "Sci Fi Ambient Soundscape",
+            description: "A custom drawn out sythesizer, with a late attack and emphasized lows and highs. Resulting in an eery, mysterious, and wide noise.",
+            date: "06/12/2025",
+            duration: "1m 52s"
+        },
+        {
+            id: "goneGirl",
+            name: "Gone Girl Scene Transition",
+            description: "Piano, synthesizer, and synth bass. Similar to the sounds found in Trent Reznor and Atticus Ross's \"Gone Girl\" soundtrack.",
+            date: "06/12/2025",
+            duration: "1m 52s"
+        },
+        {
+            id: "nationalGeographic",
+            name: "National Geographic",
+            description: "A calm percussion oriented synthesizer follows a simple piano. Perfect for an introduction to a new ecosystem, curious and fun.",
+            date: "06/12/2025",
+            duration: "1m 52s"
+        },
+        {
+            id: "oppenheimer",
+            name: "Oppenheimer Backing Track",
+            description: "Drawn out orchestra gives a reverbed and ambient noise. Creating an ambient atmosphere for the world found in \"Oppenheimer\".",
+            date: "06/12/2025",
+            duration: "1m 52s"
+        },
+        {
+            id: "radioSilence",
+            name: "Motion Picture Soundtrack",
+            description: "An incredibly muddy and low synth follows a similar progression to Radiohead's \"Motion Picture Soundtrack\". ",
+            date: "06/12/2025",
+            duration: "1m 52s"
+        },
+        {
+            id: "succession",
+            name: "Succession Ambient Piano",
+            description: "A custom delayed piano noise allows for an ambient sound similar to the soundtrack of HBO's \"Succesion\".",
+            date: "06/12/2025",
+            duration: "1m 52s"
+        },
+        {
+            id: "sparseTrentReznor",
+            name: "Inbetween",
+            description: "Low synth bass and eery synthesized percussion gives a soundscape of movement. Similar to the style of Trent Reznor and Atticus Ross.",
+            date: "06/12/2025",
+            duration: "1m 52s"
+        },
+        {
+            id: "trentReznorInBetween",
+            name: "Guidance",
+            description: "Synth bass, piano for tempo, distorted / reverbed guitars. A guiding track, for telling a story, or for a moment of change. I like the end :).",
+            date: "06/12/2025",
+            duration: "1m 52s"
+        },
+        {
+            id: "unsettling",
+            name: "Sudden Danger",
+            description: "An experimental horror related track. Reversed synth bass and a synthesized scraping noise provide elements of discomfort.",
+            date: "06/12/2025",
+            duration: "1m 52s"
         }
     ]
 </script>
