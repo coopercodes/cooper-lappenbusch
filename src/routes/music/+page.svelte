@@ -83,7 +83,7 @@
         {
             id: "succession",
             name: "Succession Ambient Piano",
-            description: "A custom delayed piano noise allows for an ambient sound similar to the soundtrack of HBO's \"Succesion\".",
+            description: "A custom delayed piano noise allows for an ambient sound similar to the soundtrack of HBO's \"Succession\".",
             date: "06/12/2025",
             duration: "1m 52s"
         },
