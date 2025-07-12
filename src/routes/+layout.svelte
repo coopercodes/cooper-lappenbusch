@@ -67,24 +67,40 @@
         
         <!-- Modal card -->
         <div 
-            class="relative bg-white rounded-lg shadow-xl p-6 max-w-md w-full mx-4"
+            class="relative bg-white rounded-lg shadow-xl p-12 max-w-xl w-full mx-4"
             onclick={(e) => e.stopPropagation()}
         >
-            <!-- Close button -->
-            <button 
-                onclick={closeModal}
-                class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200"
-            >
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-            
-            <!-- Modal content -->
-            <div class="text-center">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Hello!</h2>
-                <p class="text-gray-600">This is a basic modal with a blurred background.</p>
+            <div class="flex-1 flex items-center justify-center">
+            <div class="w-full md:max-w-xl">
+                <p class="text-5xl leading-12 font-semibold text-black mb-2">Let's Work</p>
+                <p class="text-lg mb-4 text-black">I'm for hire. Need educational products built? Let's do it. Need a solid player for your next startup? I'm there. Reach out and let's talk.</p>
+                <p class="mb-0 text-sm">email (click to copy)</p>
+                <p class="text-2xl mb-4 cursor-pointer">cooper.lappenbusch@gmail.com</p>
+                <p class=" text-black">Send me an email. I respond to every single email I receive.</p>
+
+                <!-- <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-neutral-700 mb-2">Name</label>
+                        <input type="text" class="w-full h-12 bg-neutral-200 border-0 rounded px-4 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-neutral-700 mb-2">Email</label>
+                        <input type="email" class="w-full h-12 bg-neutral-200 border-0 rounded px-4 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-neutral-700 mb-2">Note (Hiring, need consulting, etc)</label>
+                        <textarea rows="5" class="w-full bg-neutral-200 border-0 rounded px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded transition-colors duration-200">
+                        Send To Cooper
+                    </button>
+                    
+                </form> -->
             </div>
+        </div>
         </div>
     </div>
 {/if}
