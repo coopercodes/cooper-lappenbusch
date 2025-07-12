@@ -84,6 +84,21 @@
     function getCurrentImage(carouselId) {
         return carousels[carouselId][indices[carouselId]];
     }
+
+    let copied = $state(false);
+  
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText('cooper.lappenbusch@gmail.com');
+      copied = true;
+      // Reset the copied state after 2 seconds
+      setTimeout(() => {
+        copied = false;
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy email: ', err);
+    }
+  }
 </script>
 
 <div class="  pt-[124px] flex flex-col items-center mx-6 md:mx-0">
@@ -676,7 +691,9 @@ click your tag (ex: Studying),  and start tracking your time.
                 <h1 class="text-5xl font-bold text-black pb-2">Let's Work</h1>
                 <p class="text-lg mb-4 text-black">I'm for hire. Need educational products built? Let's do it. Need a solid player for your next startup? I'm there. Reach out and let's talk.</p>
                 <p class="mb-0 text-sm">email (click to copy)</p>
-                <p class="text-2xl mb-4 cursor-pointer">cooper.lappenbusch@gmail.com</p>
+                <button onclick={copyEmail} class="text-2xl mb-4 cursor-pointer">cooper.lappenbusch@gmail.com {#if copied}
+                    <span class="text-sm text-green-600 ml-2">✓ Copied!</span>
+                {/if}</button>
                 <p class=" mb-4 text-black">Send me an email. I respond to every single email I receive.</p>
 
                 <!-- <form class="space-y-6">
