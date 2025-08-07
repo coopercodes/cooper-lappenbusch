@@ -25,6 +25,13 @@
             duration: "1m 58s"
         },
         {
+            id: "snow",
+            name: "Snow Synths",
+            description: "A dance related test track with synths designed in a similar way to the Snow Strippers discography. Fun test into different genre.",
+            date: "06/12/2025",
+            duration: "1m 50s"
+        },
+        {
             id: "wikimedia",
             name: "WikiMedia Sound Logo Entry",
             description: "My entry to a contest for a Chime for Wikimedia, the Wikipedia for sound. ",
