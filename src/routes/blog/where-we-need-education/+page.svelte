@@ -252,7 +252,7 @@
         </div>
 
         <p class="text-lg text-black mt-4">
-            Whether it is books, practice questions, learning excersies, tutor responses, or entire courses: content is king in the education space. The amount of great educational content is incredibly low, most of it being low hanging fruit, quickly produced, low effort nonsense. Why is it like this? Great writing is difficult, it requires philosophy, understanding the learner, and taking the time to analyze each step of the learning process. I have found that content is a central flaw, even to content driven education businesses.
+            Whether it is books, practice questions, learning excersies, tutor responses, or entire courses: content is king in the education space. Most education related content is not great, most of it being low hanging fruit, quickly produced, sometimes AI written, low effort nonsense. Why is it like this? Great writing is difficult, it requires philosophy, understanding the learner, and taking the time to analyze each step of the learning process. I have found that content is a central flaw, even to content driven education businesses.
         </p>
 
 
@@ -264,11 +264,11 @@
         </div>
 
         <p class="text-lg text-black mt-4">
-            A user must have the time to use your platform. If a user literally does not have a single minute of free time to user your platform, then the platform effectively means nothing to that user. You can generate time by minimizing a users commute, minimizing time spent on other platforms (tiktok / gaming / literally any other platform), decreasing hours in working schedules, or give them opportunities to use the platform in school. 
+            A user must have the time to use your platform. If a user literally does not have a single minute of free time to use your platform, then the platform effectively means nothing to that user. You can generate time by minimizing a users commute, minimizing time spent on other platforms (tiktok / gaming / literally any other platform), decreasing hours in working schedules, or give them opportunities to use the platform in school. 
         </p>
 
         <p class="text-lg text-black mt-8">
-            This is quick overview, and I don't mean to imply that a student should quit their part time job in order to study physics. I intent to discuss time from a logical perspective, where we understand that time is a finite resource from the perspective of a user. Some users literally do not have the time to learn, and that is an important thing to understand when looking at user behaviour.
+            This is quick overview of time, and I don't mean to imply that a student should quit their part time job in order to study physics. I intend to discuss time from a logical perspective, where we understand that time is a finite resource from the perspective of a user. Some users literally do not have the time to learn, and that is an important thing to understand when looking at user behaviour.
         </p>
 
 
@@ -304,53 +304,53 @@
         </div>
 
         <p class="text-lg text-black mt-8">
-            I'm likely going to write more about my market research of the many areas I considered before choosing SAT prep, but yeah SAT prep is pretty legit when trying to build an education product. The below paragraphs are just going to be some introspection into different reasons as to why I think SAT prep itself is a powerful category.
+            I'm likely going to write more about my market research of the many areas I considered before choosing SAT prep, but yeah SAT prep is pretty legit. The below paragraphs are just going to be some introspection into different reasons as to why I think SAT prep itself is a powerful category.
         </p>
 
         <p class="text-lg text-black mt-8">
-            Solves the classist problem.
+            SAT prep is a powerful niche because of a looming United States class problem. The wealth gap is only increasing but still around 70-80% of high school students take the SAT. A class widening only increases the importance of the SAT and may result in a Japanese/Korean-esque education culture in the United States with a massive entrance exam focus.
         </p>
 
         <p class="text-lg text-black mt-8">
-            Has a measurable input and output to gauge the effectiveness of the platform.
+            The SAT has a measurable input and output, which is MASSIVELY important for guaging the effectiveness of an education platform. A student can enter the platform with an 1150 score, and leave with a 1480 score. We can then study the inputted time, the exercises completed, and overall platform activity to guage effectiveness in a highly granular way. Do this process for a large amount of users, and you begin to develop massively interesting education insights.
         </p>
 
         <p class="text-lg text-black mt-8">
-            High incentive to use.
+            The SAT prep industry is already nearing $7 billion dollars a year worldwide, and the industry is rapidly adopting technology first options. There are a handful of large players (does not operate like a monopoly) and building a seat at the table is a pursuable goal. I'm also not impressed by the current competition, and I believe that their "technology first approach" feels more like an older internet where it should feel like the future. Plus the market is younger people, possibly more interested in a "cutting edge" approach compared to an older audience.
         </p>
 
         <p class="text-lg text-black mt-8">
-            Pre-existing problem that is large.
+            SAT prep doesn't require a network effect. Users can use a learning platform in isolation, and find results in isolation. This is helpful for the early days, where I'm likely to be working with just a handful of early adopters. Using the network effect to scale it would be cool, but it would be a stretch goal instead of the main focus of the platform: higher SAT scores.
         </p>
 
         <p class="text-lg text-black mt-8">
-            No network effect bottlenecks, can work in isolation.
+            The SAT has defined question sets / difficulty ranges. This makes it easier to build a recommendation algorithim, as most of the difficulty has already been labeled for us. I already have a decent algorithim I have been working on, which I will likely discus in a future post.
         </p>
 
         <p class="text-lg text-black mt-8">
-            Predefined question sets / difficulty ranges. Easier to build algorithim.
-        </p>
-
-        <p class="text-lg text-black mt-8">
-            Solutions exist, but they are not beautiful enough. I can build the best solution.
-        </p>
-
-        <p class="text-lg text-black mt-8">
-            Large amount of money. Important for scaling and societal importance.
+            Mentioned above, but $7B a year (for just the SAT btw) is not a small number. If I want this thing to be a company, I gotta find a way to make some cash (sorry socialists). I think my selfish want to build an education company aligns with the selfish want of students dreaming of a higher SAT score, the wants connect.
         </p>
 
         <p class="text-lg text-black mt-8"> 
-            Interesting article on market size: 
+            I'm too lazy to cite my sources, and lots of what I'm referencing above comes from market research. Interesting article on market size: 
             https://www.bizstim.com/news/article/sat-prep-services-a-booming-business-amidst-college-admissions-changes
         </p>
         <p class="text-lg text-black mt-8"> 
-            Interesting market research paper (shows decent competition): 
+            Interesting market research paper (shows decent competition / non monopoly metrics in overview): 
             https://www.marketresearch.com/Global-Industry-Analysts-v1039/Test-Preparation-41288703/
         </p>
 
 
+        <div class="flex justify-center my-24">
+            <div class="h-[1px] w-[50%] bg-black">- end</div>
+        </div>
+
+        <p class="text-lg text-black ">
+            this post is just an attempt to begin an overall understanding as to how the world views education. It's incomplete and biased, just like everyone. Thanks for reading.
+        </p>
+
         <p class="text-lg text-black mt-8">
-            side note: this is kinda just a journal of sorts for myself, as I attempt to begin an overall understanding as to how the world views education. It's incomplete and biased, just like everyone.
+            - cooper lappenbusch
         </p>
 
         <!-- <div class="flex items-center  mt-16">
