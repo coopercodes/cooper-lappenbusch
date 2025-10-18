@@ -6,25 +6,42 @@
         "Svelte": "bg-orange-500",
         "PostgreSQL": "bg-green-500",
         "General": "bg-neutral-800",
-        "Education": "bg-cyan-600"
+        "Education": "bg-cyan-600",
+        "Philosophy": "bg-blue-600"
     }
 
     const allBlogs = [
+        // {
+        //     id: "knowledge-tunneling",
+        //     title: "Knowledge Tunneling | Building Multi Layered Knowledge Graphs For Optimal Learning",
+        //     description: "Multi layered knowledge graph? Wha is this guy talking about? Hear me out.",
+        //     date: "June 24, 2025",
+        //     readTime: "15m",
+        //     tags: ["Education"]
+        // },
+        // {
+        //     id: "educational-sme-agents",
+        //     title: "Using LLMs To Build Knowledge Graphs",
+        //     description: "Exploring how we can use LLMs to build knowledge graphs for any sector of education. Evaluating importance, difficulty, and the most efficient learning paths for students.",
+        //     date: "June 22, 2025",
+        //     readTime: "15m",
+        //     tags: ["Education"]
+        // }
+        // {
+        //     id: "against-modern-education",
+        //     title: "The SAT Score - A Golden Metric, or a Classist Tool Against Societal Meritocracy?",
+        //     description: "A discussion of the societal impact of a highly effective education tool. Understanding the impact of learning tools on the importance of the standardized test score. Why building an effective education tool may result in a meritocratic system for all.",
+        //     date: "October 17, 2025",
+        //     readTime: "12m",
+        //     tags: ["Philosophy", "Education"]
+        // }
         {
-            id: "knowledge-tunneling",
-            title: "Knowledge Tunneling | Building Multi Layered Knowledge Graphs For Optimal Learning",
-            description: "Multi layered knowledge graph? Wha is this guy talking about? Hear me out.",
-            date: "June 24, 2025",
-            readTime: "15m",
-            tags: ["Education"]
-        },
-        {
-            id: "educational-sme-agents",
-            title: "Using LLMs To Build Knowledge Graphs",
-            description: "Exploring how we can use LLMs to build knowledge graphs for any sector of education. Evaluating importance, difficulty, and the most efficient learning paths for students.",
-            date: "June 22, 2025",
-            readTime: "15m",
-            tags: ["Education"]
+            id: "where-we-need-education",
+            title: "Education, Where Do We Need It?",
+            description: "An analysis of my personal values, and how education can result in a world I perceive as more beautiful. An introduction to my core philosophies and my views on online education.",
+            date: "October 17, 2025",
+            readTime: "12m",
+            tags: ["Philosophy", "Education"]
         }
     ];
 
@@ -118,7 +135,7 @@
         <div class="md:flex hidden w-[1px] h-[84px] bg-black mx-12"></div>
         <div class="md:flex hidden  flex-col justify-center w-full bg-[#273F4F] rounded-[10px] p-6.5">
             <p class="text-white font-extrabold">Writing Philosophy</p>
-            <p class="text-white">Ideas are more poweful when shared. The gap between ideas and real world value is proper execution.</p>
+            <p class="text-white">Ideas are more powerful when shared. The gap between ideas and real world value is proper execution.</p>
         </div>
     </div>
 
