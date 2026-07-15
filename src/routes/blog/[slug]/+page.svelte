@@ -7,7 +7,8 @@
         "PostgreSQL": "bg-green-500",
         "General": "bg-neutral-800",
         "Education": "bg-cyan-600",
-        "Philosophy": "bg-blue-600"
+        "Philosophy": "bg-blue-600",
+        "Branch": "bg-neutral-900"
     }
 
     const allBlogs = [
@@ -35,6 +36,15 @@
         //     readTime: "12m",
         //     tags: ["Philosophy", "Education"]
         // }
+
+        {
+            id: "building-branch",
+            title: "Building Branch",
+            description: "An analysis of my personal values, and how education can result in a world I perceive as more beautiful. An introduction to my core philosophies and my views on online education.",
+            date: "July 15, 2026",
+            readTime: "12m",
+            tags: ["Education", "Branch"]
+        },
         {
             id: "where-we-need-education",
             title: "Education, Where Do We Need It?",
